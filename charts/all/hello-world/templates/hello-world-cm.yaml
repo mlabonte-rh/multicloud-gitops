@@ -1,23 +1,46 @@
 apiVersion: v1
+ apiVersion: v1
 kind: ConfigMap
+ kind: ConfigMap
 metadata:
+ metadata:
   name: hello-world-configmap
+   name: hello-world-configmap
   labels:
+   labels:
     app.kubernetes.io/instance: hello-world
+     app.kubernetes.io/instance: hello-world
 data:
+ data:
   "index.html": |-
+   "index.html": |-
     <!DOCTYPE html>
+     <!DOCTYPE html>
       <html lang="en">
+       <html lang="en">
         <head>
+         <head>
           <meta charset="utf-8">
+           <meta charset="utf-8">
           <title>Hello World</title>
+           <title>Hello World</title>
         </head>
+         </head>
           <body>
-            <h1>Hello World!</h1>
+           <body>
+            <h1>Yep!</h1>
+             <h1>Hello World!</h1>
             <br/>
+             <br/>
             <h2>
+             <h2>
             Hub Cluster domain is '{{ .Values.global.hubClusterDomain }}' <br>
+             Hub Cluster domain is '{{ .Values.global.hubClusterDomain }}' <br>
             Pod is running on Local Cluster Domain '{{ .Values.global.localClusterDomain }}' <br>
+             Pod is running on Local Cluster Domain '{{ .Values.global.localClusterDomain }}' <br>
             </h2>
+             </h2>
           </body>
+           </body>
       </html>
+       </html>
